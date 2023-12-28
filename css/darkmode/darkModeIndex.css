@@ -1,0 +1,30 @@
+:root {
+  --teste2: rgba(58, 59, 60);
+  --teste: #fa0909;
+  /* Cores do tema dark mode */
+  --dark-bg: #202020;
+  --light-bg: #ffffff;
+  /*formulario*/
+  --dark-bg-box: #181717;
+  /*text*/
+  --dark-text: #dfdfdf;
+  --dark-bg-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+  --dark-btn: rgba(36, 37, 38);
+  --dark-logo: #000000;
+  /*painel config */
+  --configs01: #b0b3b8;
+  --options00: #242526;
+  --options01: #22142b;
+}
+
+body.darkmode {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+.darkmode .boxPet span {
+  color: var(--light-bg);
+}

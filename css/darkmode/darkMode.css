@@ -1,0 +1,68 @@
+:root {
+  /* Cores do tema dark mode */
+  --dark-bg: #000000;
+
+  /*formulario*/
+  --dark-bg-box: #292929;
+  /*text*/
+  --dark-text: #dfdfdf;
+  --dark-bg-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+  --dark-btn: #ffffff;
+  --dark-logo: #000000;
+}
+
+body.darkmode {
+  background: var(--dark-bg);
+  color: var(--dark-bg);
+}
+
+/*formulario*/
+.darkmode.formSpace {
+  background: var(--dark-bg-box);
+}
+.darkmode.formSpace label {
+  color: var(--dark-text);
+}
+.darkmode.formSpace p {
+  color: var(--dark-text);
+}
+
+.darkmode.container .formSpaceContent img {
+  width: 50%;
+  background: var(--dark-bg);
+}
+
+/*BOTAO DE LOGAR*/
+
+.darkmode.container .formSpaceContent .btn {
+  background: var(--dark-btn);
+  color: rgb(7, 7, 7);
+}
+
+/*
+.dark-mode .container .imageSpaceContent {
+  color: var(--dark);
+}
+*/
+
+.painel-config {
+  position: relative;
+  display: inline-block;
+}
+
+.icone-config {
+  cursor: pointer;
+}
+
+#painelConfig {
+  width: 30px;
+  height: 30px;
+}
+
+.opcoes {
+  display: none;
+}

@@ -1,0 +1,237 @@
+:root {
+  --color00: #00050b; /*cor escura*/
+  --color01: #fff; /*cor clara*/
+  --color10: #808080;
+  --color10-1: #dfdfdf;
+  --color100: #0fabb1; /*cor menu*/
+  --color100-1: #08999e;
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  -webkit-user-select: none;
+  padding-left: 6%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  min-height: 50%;
+  width: 100%;
+}
+
+/*MENU*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 7%;
+}
+.menu button {
+  height: 50%;
+  border: none;
+  background: none;
+}
+.menu button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+}
+.menuItem {
+  height: 100%;
+  width: 100%;
+  background: var(--color100);
+}
+.menuItem i:hover {
+  transition: 0.2s;
+  color: var(--color01);
+}
+
+.menuItem:hover {
+  transition: 0.8s;
+  padding: 0 5%;
+  background: var(--color100-1);
+}
+
+/*RESTO*/
+.content {
+  position: relative;
+  width: 100%;
+  margin: 0 2% 0 3%;
+}
+
+/*negocio que add os pet*/
+#head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2% 0 4% 0;
+}
+#head img {
+  width: 10%;
+}
+
+/*parte GERAL dos box de cada pet*/
+
+#containerBoxPet {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 23% 23% 23% 23%;
+  gap: 2.65%;
+  min-height: 23%;
+}
+
+/*BOX DE CADA PET*/
+
+.boxPet {
+  width: 100%;
+}
+.boxPet img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.boxPet span {
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color00);
+}
+
+/*ADICIONAR NOVO PET*/
+#addPet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 91%;
+}
+#addPet a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#addPet label {
+  display: flex;
+  align-items: center;
+  margin-top: -10%;
+  font-size: 10vh;
+  text-transform: capitalize;
+  color: var(--color10-1);
+}
+#addPet i {
+  display: flex;
+  align-items: center;
+  font-size: 200px;
+  color: var(--color10-1);
+}
+/*user*/
+
+.divUser {
+  display: none;
+  position: absolute;
+  top: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3%;
+  margin-left: 1%;
+  width: 20%;
+  height: auto;
+  padding: 1% 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  background: var(--color01);
+}
+
+.divUser hr {
+  border: 0.1px solid rgb(228, 228, 228);
+  margin: 5% 0;
+}
+
+.divUser h1,
+h2,
+p,
+#userA {
+  padding: 1% 2% 1% 5%;
+}
+#userA:hover {
+  background: var(--color10-1);
+  transition: 0.5s;
+}
+/*versão mobile celular e tablet*/
+@media (min-width: 320px) and (max-width: 1024px) {
+  /*faz o menu ficar embaixo*/
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu {
+    flex-direction: row;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    z-index: 1;
+  }
+  .menu button {
+    height: 100%;
+    width: 50%;
+  }
+  .menuItem {
+    width: 100%;
+    height: 100%;
+    background: var(--color100);
+  }
+  .menuItem:hover {
+    transition: 0.8s;
+    padding: 0;
+    background: var(--color100-1);
+  }
+
+  /*arruma a parte que aparece os pet*/
+  .container {
+    min-width: 100%;
+  }
+  .content {
+    width: 90%;
+    margin: 0;
+  }
+  #containerBoxPet {
+    grid-template-columns: 49% 49%;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /*arruma a logo*/
+  #head {
+    padding: 2% 0 6% 0;
+  }
+  #head img {
+    width: 25%;
+  }
+  /*arruma o add pet*/
+  #addPet {
+    height: auto;
+    padding-bottom: 45%;
+  }
+
+  #addPet i {
+    font-size: 160px;
+  }
+  #addPet label {
+    font-size: 8vh;
+  }
+}

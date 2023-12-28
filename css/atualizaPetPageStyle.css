@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap");
+:root {
+  --color00: #e4eaee;
+  --color01: #a8a8a8;
+  --color10: #0fabb1;
+  --color11: #551a8b;
+  --color100: #3d3d3d;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-size: 2vh; 
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+/*determina a cor de fundo dos input e select*/
+input,
+select {
+  background: var(--color00);
+  font-size: 2vh;
+  padding-left: 3%;
+  margin: 0 0 0 0;
+  text-transform: capitalize;
+}
+select:focus,
+input:focus {
+  outline: none;
+}
+label {
+  text-transform: uppercase;
+  color: #292929;
+}
+/*FORM*/
+form {
+  display: flex;
+  width: 90%;
+  height: 85%;
+}
+.leftSpace,
+.centerSpace,
+.rightSpace {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 33.33%;
+  min-height: 100%;
+}
+
+/*ESTILO DA PARTE ESQUERDA DA PAGINA (ONDE ESTA O INPUT DE IMAGEM, NOME DO RESPONSAVEL E TELEFONE)*/
+#inputFile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+  margin-bottom: 5%;
+}
+/*imagem que sai apos anexar o arquivo pelo input file*/
+#inputFile #output {
+  height: 30vh;
+  width: 30vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 4%;
+}
+/*botao de adicionar o arquivo*/
+.inputFotoPet {
+  width: 100%;
+  color: transparent;
+  padding: 0;
+  border-radius: 40px;
+  margin: 0 0 0 2%;
+  /*ANTONIO QUE COLOCOU*/
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  cursor: pointer;
+  border-radius: 40px;
+  outline: none;
+  width: 100%;
+  height: 6.5vh;
+  font-size: 2.5vh;
+  color: #fff;
+  opacity: 0.5;
+  background: var(--color01);
+}
+.inputFotoPet::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+/*ESTILOS DO INPUT*/
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.inputBox input {
+  width: 100%;
+  height: 6.5vh;
+  border: none;
+  border-radius: 40px;
+}
+#btnInputFile {
+  width: 100%;
+}
+/*ESTILO DA PARTE CENTRAL DA PAGINA (ONDE ESTÁ AS INFORMAÇÕES PRINCIPAIS DO PET)*/
+.centerSpace {
+  display: flex;
+  flex-direction: column;
+}
+.selectBox {
+  width: 80%;
+  display: inline-flex;
+  flex-direction: column;
+}
+.selectBox select {
+  background-color: var(--color00);
+  width: 103%;
+  height: 6.5vh;
+  border: none;
+  border-radius: 40px;
+}
+
+/*ESTILO DA PARTE DIREITA DA PAGINA (ONDE STA AS INFORMAÇÕES DE SAUDE DO PET)*/
+#titleSaude {
+  width: 80%;
+  margin: 0 0 2% 0;
+  font-size: 4vh;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.inputCheckboxContent {
+  width: 83%;
+}
+.checkboxBox {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  width: 100%;
+  height: 6.5vh;
+  margin: 0 0 5% 0;
+  border: 2px solid var(--color01);
+  border-radius: 40px;
+}
+input[type="checkbox"] {
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 100px;
+  background: none;
+  cursor: pointer;
+  margin: 0 3%;
+  height: 3vh;
+  width: 3vh;
+  -webkit-appearance: none;
+  opacity: 0.5;
+}
+
+input[type="checkbox"]:hover {
+  opacity: 1;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #000;
+  opacity: 1;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 0.7vh;
+  height: 1.7vh;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
+/*BOTAO DE ALTERAR*/
+#btnAlterar {
+  width: 83%;
+  height: 6.5vh;
+  padding: 0;
+  border: none;
+  border-radius: 40px;
+  font-size: 2.5vh;
+  background: var(--color10);
+  color: #fff;
+}
+#btnAlterar:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+/*BOTAO DE EXCLUIR*/
+#btnDeletarPet {
+  width: 83%;
+  height: 6.5vh;
+  padding: 0;
+  margin: 5% 0 0 0;
+  border: none;
+  border-radius: 40px;
+  font-size: 2.5vh;
+  background: var(--color10);
+  color: #fff;
+}
+#btnDeletarPet:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+/* FOI A UNICA COISA QUE EU COLOQUEI O RESTO ESTA COMPLETAMNETE IGUAL */
+fieldset {
+  display: contents;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+}
+.hidden {
+  display: none;
+}
+
+/* pro modal */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background-color: rgb(235, 233, 233);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.modal button {
+  float: right;
+  font-size: 40px;
+  background: none;
+  border: none;
+}
+#modQrCode{
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background-color: rgb(235, 233, 233);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+/*BOTÃO DE DELETAR*/
+#btnDeletar {
+  width: 80%;
+  height: 6.5vh;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 40px;
+  margin: 5% 0 1% 0;
+  background: var(--color10);
+  color: #fff;
+}
+#btnDeletar:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/*BOTOES DA LATERAL*/
+.qrCodeLocal {
+  position: relative;
+  display: flex;
+  left: 2.6%;
+  flex-direction: column;
+  background: var(--color100);
+  height: 100%;
+  width: 5%;
+  border-radius: 0 10px 10px 0;
+}
+.qrCodeLocal a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.33%;
+  text-decoration: none;
+}
+.qrCodeLocal a:hover {
+  transition: 0.8s;
+  background: var(--color10);
+  border-radius: 0 9px 9px 0;
+}
+.qrCodeLocal i {
+  color: #fff;
+  font-size: 40px;
+}
+/* ANTONIO COLOCOU */
+/* tenho a minima ideia doq isso faz */
+
+.inputDoc {
+  /* visibility: hidden etc. wont work */
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputDoc:focus + label {
+  /* keyboard navigation */
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.inputDoc + label * {
+  pointer-events: none;
+}
+
+/*versão mobile celular e tablet*/
+@media (min-width: 320px) and (max-width: 1024px) {
+  body {
+    margin-top: 5%;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .leftSpace,
+  .centerSpace,
+  .rightSpace {
+    width: 100%;
+    margin: 5% 0;
+  }
+  .rightSpace {
+    padding: 0 0 5% 0;
+  }
+  /*negocio de apagar*/
+  #modQrCode {
+    background-color: red;
+  }
+  .modal {
+    width: 80%;
+  }
+  .modal h1 {
+    font-size: 20px;
+  }
+
+  /*arruma os icon de qrcode e localização*/
+  .qrCodeLocal {
+    position: fixed;
+    top: 10%;
+  }
+  /*INPUT*/
+  input,
+  select {
+    height: 7.5vh;
+  }
+  /*campos tamanhos*/
+  .inputBox input,
+  .selectBox select,
+  .checkboxBox {
+    height: 7.5vh;
+  }
+  /*botao*/
+  #btnAlterar {
+    height: 7.5vh;
+  }
+  /*botao de colocar a imagem*/
+  .inputFotoPet::before {
+    height: 7.5vh;
+  }
+  /*IMAGEM*/
+  #inputFile #output {
+    padding: 5% 0 0 0;
+    height: 40vh;
+    width: 40vh;
+  }
+  /*BORRADO DO EXCLUIR*/
+  .overlay {
+    height: 300%;
+  }
+
+  /*MENU*/
+  /*BOTOES DA LATERAL*/
+  .qrCodeLocal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    left: 2.6%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 12%;
+    width: 102%;
+    margin-left: -2.9%;
+    border-radius: 0;
+  }
+  .qrCodeLocal a {
+    height: 100%;
+    width: 33.33%;
+  }
+  .qrCodeLocal a:hover {
+    border-radius: 0;
+  }
+}

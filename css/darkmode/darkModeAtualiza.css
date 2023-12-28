@@ -1,0 +1,75 @@
+:root {
+    /* Cores do tema dark mode */
+    --dark-bg: #202020;
+    --light-bg: #323336;
+    --dark-bg-box:#302a2a00;
+    --dark-container: #252526;
+    --dark-teste: #88898b
+    ;
+    /*formulario*/
+  
+    /*text*/
+    --dark-text: rgb(255, 255, 255);
+    --dark-bg-gradient: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    );
+    --dark-btn: #0fabb1;;
+    --dark-logo: #000000;
+  }
+  
+  body.darkmode {
+    background: var(--dark-bg);
+    color: var(--dark-bg);
+  }
+  .darkmode #btnDeletarPet{
+    background-color: var(--dark-btn);
+  }
+  .darkmode p {
+    color: var(--dark-text);
+  }
+  .modal button {
+   background-color: var(--dark-bg-box);
+  }
+  .darkmode .content {
+  background-color: var(--dark-bg-box);
+  }
+  .darkmode .modal {
+    color: var(--dark-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background-color: rgb(36, 34, 34);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgb(0, 0, 0);
+    z-index: 10;
+  }
+  .darkmode input, select {
+    background: var(--light-bg);
+    font-size: 2vh;
+    padding-left: 3%;
+    margin: 0 0 0 0;
+    text-transform: capitalize;
+  }
+  .darkmode label {
+    color: rgb(218, 205, 205);
+  }
+  .darkmode .inputFotoPet {
+    color: transparent;
+    color: #ffffff;
+    opacity: 0.90;
+    background: var(--dark-teste);
+  }
+  .darkmode .selectBox option{
+    color: var(--dark-text);
+  }
+  .darkmode .inputBox input {
+    color: var(--dark-text);
+  }
+  .darkmode .selectBox select {
+    color: var(--dark-text);
+  }

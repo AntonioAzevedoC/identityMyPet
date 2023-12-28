@@ -1,0 +1,444 @@
+:root {
+  --color0: #ffff;
+  --color00: #f8f9fc;
+  --color000: #e4eaee;
+  --color01: #f5f4f4;
+  --color11: #a8a8a8;
+
+  --color10: #0fabb1;
+  --color10-1: #08999e;
+
+  --color50: #000;
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  padding-left: 6%;
+  height: 100%;
+  background: var(--color00);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/*MENU*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 7%;
+}
+.menu button {
+  height: 50%;
+  border: none;
+  background: none;
+}
+.menu button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+}
+.menuItem {
+  height: 100%;
+  width: 100%;
+  background: var(--color10);
+}
+.menuItem i:hover {
+  transition: 0.2s;
+  color: var(--color00);
+}
+
+.menuItem:hover {
+  transition: 0.8s;
+  padding: 0 5%;
+  background: var(--color10-1);
+}
+
+/*CONTEUDO*/
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 2% 0 3%;
+}
+
+.boxContent {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 95%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* pro modal */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background-color: rgb(235, 233, 233);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.modal button {
+  float: right;
+  font-size: 40px;
+  background: none;
+  border: none;
+}
+
+/*BOTÃO DE DELETAR*/
+#btnDeletarUser {
+  display: inline-block;
+  text-align: center;
+  width: 80%;
+  height: 6.5vh;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 40px;
+  margin: 5% 0 1% 0;
+  background: var(--color10);
+  color: #fff;
+}
+#btnDeletarUser:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/*CONFIGURAÇÕES*/
+.painel-config {
+  position: absolute;
+  top: 3%;
+  left: 82%;
+  width: 18%;
+  margin: 0 0 0;
+}
+.painel-config i {
+  float: right;
+  font-size: 6vh;
+  padding: 5% 5% 10% 0;
+  color: var(--color11);
+}
+
+.opcoes {
+  display: none;
+  padding: 0 5% 0 5%;
+  height: 55vh;
+  background: var(--color000);
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.opcoes i {
+  font-size: 3vh;
+  padding: 0;
+  margin: 0 2% 0 0;
+  color: var(--color11);
+}
+.opcoes hr {
+  width: 100%;
+}
+.opcoes button,
+select {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 13%;
+  border: none;
+  /*font-size: 1.5vh;*/
+  color: var(--color11);
+  background: none;
+}
+.opcoes form {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 13%;
+  border: none;
+  /*font-size: 1.5vh;*/
+  color: var(--color11);
+  background: none;
+}
+#btnSair {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+}
+.opcoes a {
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  color: var(--color10);
+}
+/*FOTO USUARIO*/
+#inputFile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 80%;
+  margin-bottom: 5%;
+}
+/*imagem que sai apos anexar o arquivo pelo input file*/
+#inputFile #output {
+  height: 50vh;
+  width: 50vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 4%;
+}
+/*botao de adicionar o arquivo*/
+#btnInputFile {
+  width: 60%;
+}
+.inputFotoUser {
+  width: 100%;
+  color: transparent;
+  border-radius: 40px;
+  margin: 0 0 0 0;
+  /* Eu tirei as coisas daqui para baixo de "inputFotoUser::before" e coloquei aqui */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  cursor: pointer;
+  border-radius: 30px;
+  outline: none;
+  width: 100%;
+  height: 6.5vh;
+  font-size: 2.5vh;
+  opacity: 0.3;
+  color: var(--color50);
+  border: 1px solid var(--color50);
+}
+.inputFotoUser::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+/*INFORMAÇÕES DO USER*/
+#inforUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 80%;
+  margin: 0 0 0 0;
+  padding-left: 6%;
+}
+#inforUser h1 {
+  margin: 0 0 20% 0;
+  font-size: 10vh;
+  text-align: center;
+  /*font-size: 5vh;*/
+}
+#inforUser h2 {
+  margin: 0 0 5% 0;
+  font-size: 4vh;
+  /*font-size: 3.5vh;*/
+}
+#inforUser p {
+  /*font-size: 2.5vh;*/
+  font-weight: bold;
+  font-size: 3vh;
+  color: #000;
+}
+
+#inforUser input {
+  color: #000;
+}
+
+#inforUser span,
+input {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 2.5vh;
+  background: none;
+}
+
+#inforUser input {
+  border: none;
+}
+#inforUser .boxInfUser {
+  width: 100%;
+  height: 3.5vh;
+  margin: 0 0 3% 0;
+}
+
+/*boatao salvar edicoes no user*/
+#btnSubmit {
+  width: 90%;
+  height: 6.5vh;
+  padding: 0;
+  border: none;
+  border-radius: 40px;
+  margin: 5% 0 0 0;
+  font-size: 2.5vh;
+  color: #fff;
+  background: var(--color10);
+}
+
+/* TUDO QUE EU ANTONIO DE AZEVEDO COLOQUEI TA DAQUI PRA BAIXO */
+#formUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 80%;
+}
+form select {
+  height: 100%;
+}
+
+fieldset {
+  display: contents;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+}
+
+.hidden {
+  display: hidden;
+}
+
+/* tenho a minima ideia doq isso faz */
+
+.inputDoc {
+  /* visibility: hidden etc. wont work */
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputDoc:focus + label {
+  /* keyboard navigation */
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.inputDoc + label * {
+  pointer-events: none;
+}
+
+/*versão mobile celular e tablet*/
+@media (min-width: 320px) and (max-width: 1024px) {
+  /*faz o menu ficar embaixo*/
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu {
+    flex-direction: row;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    z-index: 1;
+  }
+  .menu button {
+    height: 100%;
+    width: 50%;
+  }
+  .menuItem {
+    width: 100%;
+    height: 100%;
+    background: var(--color10);
+  }
+  .menuItem:hover {
+    transition: 0.8s;
+    padding: 0;
+    background: var(--color10-1);
+  }
+
+  /*arruma a parte que aparece os pet*/
+  .container {
+    min-width: 100%;
+  }
+  .content {
+    width: 90%;
+    margin: 0;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /*arruma a forma que aparece as informacoes*/
+
+  .boxContent {
+    width: 99%;
+  }
+  #formUser {
+    flex-direction: column;
+    align-items: center;
+    margin: 20% 0 0 0;
+    height: auto;
+    width: 100%;
+  }
+  #inforUser {
+    padding: 0;
+    margin: 0 0 20% 0;
+    width: 100%;
+  }
+  #inforUser h1 {
+    text-align: center;
+    margin: 0 0 10% 0;
+  }
+  #inputFile {
+    width: 100%;
+  }
+  /*arruma a configuracao*/
+  .painel-config {
+    width: 50%;
+    top: 3%;
+    left: 50%;
+    z-index: 1;
+  }
+}

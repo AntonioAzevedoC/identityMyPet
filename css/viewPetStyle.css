@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap");
+:root {
+  --color00: white;
+  --color01: gray;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 2vh;
+}
+.containerEl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+/*TODO CONTEUDO DA PAG*/
+.contentEl {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+/*PARTE ESQUERDA DA PAGINA*/
+.leftSpace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(180deg, #5ddfe7 0%, #895dfd 100%);
+}
+/*BOX ONDE ESTA A IMAGEM E O NOME DO PET*/
+#boxImgPetView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+#boxImgPetView #imgPet {
+  width: 50vh;
+  height: 50vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#boxImgPetView #namePet {
+  margin: 3% 0 0 0;
+  font-size: 5vh;
+}
+
+/*PARTE DIREITA DA PAGINA*/
+.righSpace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 60%;
+}
+#rightSContente {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  width: 90%;
+}
+
+/*CADA CAIXINHA DE INFORMACAO*/
+.boxInfor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32%;
+  padding: 3% 0;
+}
+.infor {
+  display: flex;
+  width: 100%;
+}
+.infor01 {
+  width: 50%;
+}
+.infor02 {
+  width: 50%;
+}
+.infor201 {
+  width: 100%;
+}
+/*h1*/
+.h1Title {
+  width: 100%;
+  margin: 0 0 1% 0;
+  font-size: 3vh;
+  text-transform: capitalize;
+}
+/*labels*/
+.labelInfor {
+  display: block;
+  font-size: 2vh;
+  text-transform: capitalize;
+  margin: 0.5% 0;
+}
+.labelInfor2 {
+  /*essa é a label da parte "saúde"*/
+  font-size: 2vh;
+  text-transform: capitalize;
+}
+.infor011 {
+  display: flex;
+  align-items: center;
+}
+/*as*/
+.aInfor {
+  display: block;
+  font-size: 2vh;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin: 0.5% 0;
+  color: var(--color01);
+}
+/*imagens da saude*/
+.yesOrNo {
+  width: 25px;
+  border-radius: 50%;
+  margin: 0.9% 1% 0.9% 0;
+}
+/*DIV DA IMAGEM E DA LABEL DA SAUDE*/
+.infor011 {
+  display: flex;
+}
+
+/**/
+/*@media*/
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  /*faz com que as duas partes fiquem abaixo uma das outras*/
+  .contentEl {
+    flex-direction: column;
+  }
+
+  /*faz a parte colorida cobrir a tela toda*/
+  .leftSpace {
+    width: 100%;
+    height: 60%;
+    margin-top: -30%;
+  }
+
+  /*arruma a foto*/
+  #boxImgPetView {
+    position: relative;
+    top: 40%;
+  }
+
+  #boxImgPetView #imgPet {
+    width: 370px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  /*faz com que a segunda pagina nao fique bugada "embaixo da foto e etc*/
+  .righSpace {
+    width: 100%;
+    margin-top: 50%;
+  }
+}

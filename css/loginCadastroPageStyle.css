@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap");
+:root {
+  --color00: #fff;
+  --color10: #c9d6e6;
+  --color90: #465461;
+  /*cores degrade*/
+  --color100: rgba(15, 171, 177, 0.8);
+  --color200: rgba(3, 49, 51, 0.8);
+  --color100-1: rgb(15, 171, 177);
+  --color200-1: rgba(3, 49, 51);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2vh;
+  background: rgb(241, 241, 241);
+  color: var(--color90);
+}
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+}
+.container {
+  display: flex;
+  width: 65%;
+  height: 80%;
+  background: var(--color00);
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+/*ESTILO PARTE ESQUERDA*/
+.formSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.formSpaceContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 70%;
+}
+.formSpaceContent img {
+  width: 30vh;
+}
+/*FORMULARIO*/
+.formSpaceContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 0 0 0 0;
+}
+.formSpaceContent form input {
+  width: 100%;
+  height: 5vh;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 2.5vh;
+  background: none;
+}
+.formSpaceContent form input:focus {
+  outline: none;
+}
+.formSpaceContent form label {
+  text-transform: uppercase;
+}
+
+/*BOTAO DE LOGAR*/
+.formSpaceContent .btn {
+  width: 100%;
+  height: 6.5vh;
+  border: none;
+  border-radius: 30px;
+  margin: 4% 0 4% 0;
+  text-transform: capitalize;
+  font-size: 2vh;
+  background: var(--color100-1);
+  color: white;
+}
+.formSpaceContent .btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+/*ESTILO PARTE DIREITA*/
+.imageSpace {
+  width: 50%;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+}
+.imageSpaceBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color100), var(--color200));
+}
+.imageSpaceContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 50%;
+  text-align: center;
+  color: var(--color00);
+}
+.imageSpaceContent p {
+  opacity: 0.8;
+}
+.imageSpaceContent img {
+  height: 70%;
+}
+
+.painel-config {
+  width: 100%;
+  background: darksalmon;
+}
+.opcoes {
+  width: 30%;
+  float: right;
+  background: hotpink;
+}
+.opcoes button,
+select {
+  display: block;
+  width: 100%;
+}
+.icone-config {
+  float: right;
+  display: inline;
+}
+
+fieldset {
+  display: contents;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+}
+
+/*versão mobile celular e tablet*/
+@media (min-width: 320px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .formSpace {
+    width: 100%;
+  }
+
+  .imageSpace {
+    display: none;
+  }
+  .formSpaceContent img {
+    margin: 5% 0 10% 0;
+  }
+}

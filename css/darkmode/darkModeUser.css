@@ -1,0 +1,60 @@
+:root {
+  /* Cores do tema dark mode */
+  --dark-bg: #000000;
+  --light-bg: #ffffff;
+  /*formulario*/
+  --dark-bg-box: #202020;
+  /*text*/
+  --dark-text: #dfdfdf;
+  --dark-bg-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+  --dark-btn: rgba(36, 37, 38);
+  --dark-logo: #000000;
+  /*painel config */
+  --configs: #b0b3b8;
+  --options: #242526;
+}
+
+body.darkmode {
+  background: var(--dark-bg-box);
+  color: var(--dark-text);
+}
+.darkmode .modal {
+  background-color: rgb(58, 59, 60);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+}
+.darkmode .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+.darkmode .painel-config i {
+  float: right;
+  font-size: 6vh;
+  padding: 5% 5% 10% 0;
+  color: var(--configs);
+}
+.darkmode .opcoes {
+  background: var(--options);
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.darkmode .inputFotoUser {
+  color: var(--dark-text);
+  border: 1px solid var(--dark-text);
+  opacity: 0.9;
+}
+.darkmode .opcoes option {
+  background-color: var(--options);
+}
+.darkmode #inforUser input {
+  color: var(--dark-text);
+}
+.darkmode #inforUser p {
+  color: var(--dark-text);
+}
+
+input#file.inputDoc.inputFotoUser {
+  display: none;
+}
