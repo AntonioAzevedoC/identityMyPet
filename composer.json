@@ -1,0 +1,16 @@
+{
+    "name": "usuario/sistema-tcc",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\SistemaTcc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Weriksonn"
+        }
+    ],
+    "require": {
+        "chillerlan/php-qrcode": "^1.0"
+    }
+}
